@@ -3,8 +3,10 @@
     margin: 0 auto;
     .mand-list-box, .opt-list-box {
         display: flex;
-        justify-content: space-between;
         gap: 10px;
         line-height: 2;
+    }
+    .add-button {
+        margin-left: 5px;
     }
 }
