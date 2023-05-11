@@ -10,17 +10,17 @@ function Card() {
       .then((res) => setData(res))
       .catch((err) => console.error(err));
   }, []);
+  console.log("AFFICHE TOI", data);
 
   return (
     <div className="card">
-      <h2 className="name">Argentine</h2>
-      <img className="img" alt="" />
       {data.map((el) => {
-        return <p>{el.name}</p>;
+        return <h2>{el.name}</h2>;
       })}
-      <div className="card_description">
-        <p />
-      </div>
+      {data.map((el) => {
+        return <img className="img" src={el.img} />;
+      })}
+      <div className="card_description" />
     </div>
   );
 }
