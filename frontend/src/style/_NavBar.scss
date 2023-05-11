@@ -1,0 +1,22 @@
+.NavBar {
+  background-color: var(--color-primary);
+  margin-bottom: 20px;
+  border-radius: 7px;
+
+  &_li {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding: 15px;
+  }
+  &_title {
+    color: var(--color-title-text);
+    font-family: var(--titlefont-secondary);
+    font-size: 1.2em;
+  }
+  #NavBar_a {
+    color: var(--color-title-text);
+    font-family: var(--titlefont-secondary);
+    font-size: 1.2em;
+  }
+}
