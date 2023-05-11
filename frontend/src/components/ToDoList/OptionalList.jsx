@@ -1,9 +1,20 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 function OptionalList() {
   const [optionalList, setOptionalList] = useState([]);
   const [object, setObject] = useState("");
   const [idObject, setIdObject] = useState("");
+  const [data, setData] = useState([]);
+
+  useEffect(() => {
+    fetch("http://localhost:5025/api/pays")
+      .then((res) => res.json())
+      .then((db) => {
+        setData(db);
+        console.warn(data);
+      });
+  }, []);
+
   const handleObject = (e) => {
     setObject(e.target.value);
   };
