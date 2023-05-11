@@ -1,5 +1,6 @@
 import React from "react";
 import NavBar from "../components/NavBar";
+import ListSection from "../components/ToDoList/Listsection";
 import Card from "../components/Card";
 import SelectBar from "../components/SelectBar";
 
@@ -9,7 +10,7 @@ function HomePage() {
       <NavBar />
       <SelectBar />
       <Card />
-      <p>Hello HomePage</p>
+      <ListSection />
     </div>
   );
 }
