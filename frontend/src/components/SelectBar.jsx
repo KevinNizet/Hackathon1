@@ -31,6 +31,7 @@ function SelectBar() {
             );
           })}
         </select>
+        
 
         {pays
           .filter((el) => {
@@ -42,14 +43,20 @@ function SelectBar() {
 
           .map((el) => {
             return (
-              <div className="Card">
-                <p>{el.pays}</p>
-                <img src={el.image} />
+              <div className="card">
+                <h2 className="name">{el.pays}</h2>
+                <img className="img" src={el.image} alt="" />
+                <p className="card_description">{el.description}</p>
+               <div className="full_button">              
+                <button className="button" >To-do List</button>
+                </div> 
               </div>
+              
             );
           })}
-      </label>
+          </label>
     </form>
+      
   );
 }
 

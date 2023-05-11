@@ -1,4 +1,4 @@
-.center {
+.center{
   display: flex;
   justify-content: center;
   margin: 0 auto;
@@ -22,21 +22,43 @@
     overflow: hidden;
     color: var(--color-secondary);
 
-    img {
-      max-width: 100%;
-    }
+   
 
     &:hover {
       transform: translateY(-1px);
       box-shadow: rgba(77, 79, 83, 0.2) 0px 8px 24px;
     }
 
+    .img {
+     height: 25vh;
+     display:flex;
+     align-items: center;
+
+    }
     .name {
+      margin: 20px;
       display: flex;
       justify-content: center;
+      font-family: var(--titlefont-primary);
     }
     .card_description {
-      margin: 5px;
+      margin: 20px;
+      font-family: var(--titlefont-secondary);
+    }
+    .full_button {
+      display:flex;
+      justify-content: flex-end;
+    }
+    .button {
+      background-color: var(--color-button);
+      color: var(--color-title-text);
+      font-weight: bold;
+      font-family: var(--text-font);
+      width: 40%;
+      border-radius: 5px;
+      border:none;
+      margin: 10px;
+      text-transform:uppercase;
     }
   }
 }
