@@ -6,7 +6,7 @@
   margin: 0 auto;
   margin-bottom: 20px;
   max-width: 80%;
-  background-color: rgb(255, 255, 255);
+  background-color: var(--color-bg);
   box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
   border-radius: 4px;
   transition: all 0.25s ease-out;
@@ -14,7 +14,8 @@
   background-color: white;
   transition: all 0.25s ease-out;
   overflow: hidden;
-  color: #18657d;
+  color: var(--color-secondary);
+
   &:hover {
     transform: translateY(-1px);
     box-shadow: rgba(77, 79, 83, 0.2) 0px 8px 24px;
