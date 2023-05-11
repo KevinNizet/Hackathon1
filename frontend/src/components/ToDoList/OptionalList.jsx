@@ -3,13 +3,22 @@ import { useState } from "react";
 function OptionalList() {
   const [optionalList, setOptionalList] = useState([]);
   const [object, setObject] = useState("");
+  const [idObject, setIdObject] = useState("");
   const handleObject = (e) => {
     setObject(e.target.value);
   };
 
   const handleAddObject = () => {
     setOptionalList([...optionalList, object]);
-    console.warn(optionalList);
+  };
+  const handleDeleteObject = (e) => {
+    setIdObject(e.target.value);
+    console.warn(idObject);
+    setOptionalList(
+      optionalList.filter((el) => {
+        return el !== idObject;
+      })
+    );
   };
   return (
     <>
@@ -25,7 +34,16 @@ function OptionalList() {
       </button>
       <ul>
         {optionalList.map((el) => {
-          return <li key={el}>{el}</li>;
+          return (
+            <div>
+              <li value={el} key={el}>
+                {el}
+              </li>
+              <button value={el} onClick={handleDeleteObject} type="button">
+                Retirer
+              </button>
+            </div>
+          );
         })}
       </ul>
     </>
