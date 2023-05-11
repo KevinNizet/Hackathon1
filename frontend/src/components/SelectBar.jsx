@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import "../style/_selectbar.scss";
+import "../style/_config.scss";
 
 function SelectBar() {
   const [selectedValue, setSelectedValue] = useState("");
