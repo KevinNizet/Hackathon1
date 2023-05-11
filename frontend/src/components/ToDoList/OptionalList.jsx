@@ -1,14 +1,15 @@
 import { useState } from "react";
 
 function OptionalList() {
-  const optionalList = ["", ""];
+  const [optionalList, setOptionalList] = useState([]);
   const [object, setObject] = useState("");
   const handleObject = (e) => {
     setObject(e.target.value);
   };
 
   const handleAddObject = () => {
-    optionalList.push(object);
+    setOptionalList([...optionalList, object]);
+    console.warn(optionalList);
   };
   return (
     <>
@@ -19,12 +20,13 @@ function OptionalList() {
         placeholder="A rajouter..."
         id=""
       />
-      <input type="submit" onClick={() => handleAddObject()} />
+      <button type="button" onClick={handleAddObject}>
+        Ajouter
+      </button>
       <ul>
-        {optionalList.length > 1 &&
-          optionalList.map(() => {
-            return <li>{optionalList}</li>;
-          })}
+        {optionalList.map((el) => {
+          return <li key={el}>{el}</li>;
+        })}
       </ul>
     </>
   );
