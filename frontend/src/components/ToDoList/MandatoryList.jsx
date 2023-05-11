@@ -1,22 +1,27 @@
 function MandatoryList() {
   const mandatoryList = [
-    "Passeport/CI",
+    "Passeport/Carte d'identité",
     "VISA",
-    "Moyens de paiements (CB, chèques, espèces,...)",
+    "Argent",
     "Vaccins",
+    "Valise",
+    "Billet(s)",
   ];
   return (
-    <>
+    <div className="mand-list">
       <h3>A ne pas oublier !</h3>
-      {mandatoryList.map((el) => {
-        return (
-          <ul>
-            <input type="checkbox" />
-            <li key={el}>{el}</li>
-          </ul>
-        );
-      })}
-    </>
+      <ul>
+        {mandatoryList.map((el) => {
+          return (
+            <div className="mand-list-box">
+              <input type="checkbox" />
+              <li key={el}>{el}</li>
+              <br />
+            </div>
+          );
+        })}
+      </ul>
+    </div>
   );
 }
 

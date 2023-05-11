@@ -1,0 +1,10 @@
+.mand-list, .opt-list {
+    width: 80%;
+    margin: 0 auto;
+    .mand-list-box, .opt-list-box {
+        display: flex;
+        justify-content: space-between;
+        gap: 10px;
+        line-height: 2;
+    }
+}

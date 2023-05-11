@@ -20,9 +20,11 @@ function OptionalList() {
     );
   };
   return (
-    <>
+    <div className="opt-list">
       <h3>Votre ToDoList : </h3>
+      <br />
       <input
+        className="opt-list-input"
         onChange={handleObject}
         type="text"
         placeholder="A rajouter..."
@@ -34,7 +36,8 @@ function OptionalList() {
       <ul>
         {optionalList.map((el) => {
           return (
-            <div>
+            <div className="opt-list-box">
+              <input type="checkbox" />
               <li value={el} key={el}>
                 {el}
               </li>
@@ -45,7 +48,7 @@ function OptionalList() {
           );
         })}
       </ul>
-    </>
+    </div>
   );
 }
 

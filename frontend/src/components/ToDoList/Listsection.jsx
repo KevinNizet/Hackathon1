@@ -5,6 +5,7 @@ function ListSection() {
   return (
     <>
       <MandatoryList />
+      <br />
       <OptionalList />
     </>
   );
