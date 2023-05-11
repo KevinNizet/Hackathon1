@@ -1,0 +1,40 @@
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Nobile&family=Oswald:wght@500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Nobile&family=Oswald:wght@500&family=Proza+Libre&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+ul,
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+:root {
+  --color-bg: whitesmoke;
+  --color-title-text: white;
+  --color-primary: #146c94;
+  --color-secondary: #19a7ce;
+  --color-button: #1b9c85;
+  --titlefont-primary: "Oswald", sans-serif;
+  --titlefont-secondary: "Nobile", sans-serif;
+  --text-font: "Proza Libre", sans-serif;
+}
+
+h1 {
+  font-family: var(--titlefont-primary);
+}
+h2 {
+  font-family: var(--titlefont-secondary);
+}
+p {
+  font-family: var(--text-font);
+}
