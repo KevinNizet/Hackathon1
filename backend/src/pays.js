@@ -1,12 +1,11 @@
 const database = require("./database");
 
 const getPays = (req, res) => {
-  const id = parseInt(req.params.id, 10);
   database
-    .query("select * from pays where id = ?", [id])
+    .query("SELECT * FROM pays")
     .then(([pays]) => {
       if (pays[0] != null) {
-        res.json(pays[0]);
+        res.json(pays);
       } else {
         res.status(404).send("Not Found");
       }
