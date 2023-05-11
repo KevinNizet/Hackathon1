@@ -10,9 +10,9 @@ function NavBar() {
             <NavLink to="/">
               <h2 className="NavBar_title">Accueil</h2>
             </NavLink>
-            <a id="NavBar_a" href="#TodoList">
+            <a className="NavBar_title" href="#TodoList">
               {" "}
-              To-Do Liste
+              To-Do List
             </a>
             {/*  //faire une ancre vers un endroit précis de la page pour la todoList */}
             <NavLink to="/recappage">

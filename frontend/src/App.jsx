@@ -5,7 +5,6 @@ function App() {
   return (
     <div className="App">
       <RouterFront />
-      <p>coucou</p>
     </div>
   );
 }
