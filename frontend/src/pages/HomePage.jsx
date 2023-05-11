@@ -10,7 +10,6 @@ function HomePage() {
       <NavBar />
       <SelectBar />
       <Card />
-      <p>Hello HomePage</p>
       <ListSection />
     </div>
   );

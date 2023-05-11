@@ -13,7 +13,6 @@ function OptionalList() {
   };
   const handleDeleteObject = (e) => {
     setIdObject(e.target.value);
-    console.warn(idObject);
     setOptionalList(
       optionalList.filter((el) => {
         return el !== idObject;
