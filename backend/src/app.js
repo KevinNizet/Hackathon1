@@ -24,10 +24,6 @@ app.use(
 
 // import and mount the API routes
 
-const router = require("./router.jsx");
-
-app.use(router);
-
 // serve the `backend/public` folder for public resources
 
 app.use(express.static(path.join(__dirname, "../public")));
@@ -54,7 +50,15 @@ if (fs.existsSync(reactIndexFile)) {
     res.sendFile(reactIndexFile);
   });
 }
+const voyage = require("./services/voyage.json");
 
+app.get("/api/voyage", (req, res) => {
+  res.status(200).send(voyage);
+});
+
+const pays = require("./pays");
+
+app.get("/api/pays", pays.getPays);
 // ready to export
 
 module.exports = app;
