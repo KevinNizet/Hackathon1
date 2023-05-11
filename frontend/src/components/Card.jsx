@@ -10,7 +10,6 @@ function Card() {
       .then((res) => setData(res))
       .catch((err) => console.error(err));
   }, []);
-  console.log("AFFICHE TOI", data);
 
   return (
     <div className="card">
@@ -18,7 +17,7 @@ function Card() {
         return <h2>{el.name}</h2>;
       })}
       {data.map((el) => {
-        return <img className="img" src={el.img} />;
+        return <img className="img" src={el.img} alt="" />;
       })}
       <div className="card_description" />
     </div>

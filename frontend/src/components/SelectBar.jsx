@@ -44,7 +44,7 @@ function SelectBar() {
             return (
               <div className="Card">
                 <p>{el.pays}</p>
-                <img src={el.image} />
+                <img src={el.image} alt="" />
               </div>
             );
           })}
