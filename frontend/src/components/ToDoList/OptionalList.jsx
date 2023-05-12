@@ -8,6 +8,8 @@ function OptionalList() {
     setObject(e.target.value);
   };
 
+  const suggestList = ["clés", "trousse de toilette", ""];
+
   const handleAddObject = () => {
     setOptionalList([...optionalList, object]);
   };
@@ -46,6 +48,16 @@ function OptionalList() {
               <li value={el} key={el}>
                 {el}
               </li>
+              <button value={el} onClick={handleDeleteObject} type="button">
+                Retirer
+              </button>
+            </div>
+          );
+        })}
+        {suggestList.map((el) => {
+          return (
+            <div className="opt-list-box">
+              <li>{el}</li>
               <button value={el} onClick={handleDeleteObject} type="button">
                 Retirer
               </button>
