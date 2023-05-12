@@ -10,6 +10,12 @@
   }
   .add-button {
     margin-left: 5px;
+    background-color:var(--color-button);
+    padding:8px;
+    border-radius: 7px;
+    border:none;
+    color:var(--color-title-text);
+    text-transform: uppercase;
   }
   .oubli {
     background-color: var(--color-secondary);
@@ -17,8 +23,7 @@
     padding: 13px;
     border-radius: 7px;
     margin-bottom: 10px;
-    background-position: center;
-    transition: background 0.8s;
+    margin-top:15px;
   }
 
 }
@@ -39,4 +44,11 @@
   .pays {
     margin-top: 45px;
   }
+
+   .opt-list-input {
+    margin-top:10px;
+    padding:8px;
+    border-radius:7px;
+   }
+}
 
