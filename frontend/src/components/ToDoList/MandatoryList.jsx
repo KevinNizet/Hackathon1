@@ -14,7 +14,6 @@ function MandatoryList() {
   }, []);
 
   const mandatoryList = ["Billet(s) de transport", "la valise, bien sur !"];
-  console.warn("coucou", data);
   return (
     <div className="mand-list">
       <h2>Pays Choisi : {data.pays}</h2>
