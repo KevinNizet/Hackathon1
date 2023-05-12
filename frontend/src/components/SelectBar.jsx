@@ -7,7 +7,7 @@ function SelectBar({ selectedValue, setSelectedValue }) {
   const [pays, setPays] = useState([]);
 
   useEffect(() => {
-    fetch("http://localhost:5025/api/voyage")
+    fetch("http://localhost:5025/api/pays")
       .then((res) => res.json())
       .then((res) => setPays(res))
       .catch((err) => console.error(err));
@@ -42,9 +42,15 @@ function SelectBar({ selectedValue, setSelectedValue }) {
 
           .map((el) => {
             return (
-              <div className="Card">
-                <p>{el.pays}</p>
-                <img src={el.image} alt="" />
+              <div className="card">
+                <h2 className="name">{el.pays}</h2>
+                <img className="img" src={el.image} alt="" />
+                <p className="card_description">{el.description}</p>
+                <div className="full_button">
+                  <button className="button" type="button">
+                    To-do List
+                  </button>
+                </div>
               </div>
             );
           })}
