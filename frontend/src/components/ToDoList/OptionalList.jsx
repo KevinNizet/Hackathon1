@@ -1,20 +1,43 @@
 import { useState } from "react";
 
 function OptionalList() {
+  const valiseList = [
+    "clés",
+    "permis de conduire",
+    "trousse de toilette",
+    "sous-vêtements/chaussettes",
+    "tongs",
+    "appareil photo",
+    "chargeur téléphone/ordi",
+    "écouteurs",
+    "protections périodiques",
+    "crème solaire",
+    "lunettes de soleil",
+    "médicaments",
+    "carte vitale/CEAM",
+    "contraceptifs",
+    "anti-moustique",
+    "guide touristique",
+    "plans/cartes",
+  ];
   const [optionalList, setOptionalList] = useState([]);
+  const [suggestList, setSuggestList] = useState(valiseList);
   const [object, setObject] = useState("");
   const [idObject, setIdObject] = useState("");
   const handleObject = (e) => {
     setObject(e.target.value);
   };
 
-  const suggestList = ["clés", "trousse de toilette", ""];
-
   const handleAddObject = () => {
     setOptionalList([...optionalList, object]);
   };
   const handleDeleteObject = (e) => {
     setIdObject(e.target.value);
+    setSuggestList(
+      suggestList.filter((el) => {
+        return el !== idObject;
+      })
+    );
     setOptionalList(
       optionalList.filter((el) => {
         return el !== idObject;
@@ -23,7 +46,7 @@ function OptionalList() {
   };
   return (
     <div className="opt-list">
-      <h3>Votre ToDoList : </h3>
+      <h3 className="oubli">Votre To-Do List : </h3>
       <br />
       <p>
         Ici, créez votre propre liste de choses à emmener pendant vos vacances.
@@ -54,10 +77,16 @@ function OptionalList() {
             </div>
           );
         })}
+        <br />
+        {suggestList.length >= 1 && <h3>Suggestions</h3>}
+        <br />
         {suggestList.map((el) => {
           return (
             <div className="opt-list-box">
-              <li>{el}</li>
+              <input type="checkbox" />
+              <li value={el} key={el}>
+                {el}
+              </li>
               <button value={el} onClick={handleDeleteObject} type="button">
                 Retirer
               </button>

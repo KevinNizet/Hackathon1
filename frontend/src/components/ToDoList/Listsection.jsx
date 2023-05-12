@@ -3,6 +3,8 @@ import NavBar from "../NavBar";
 import MandatoryList from "./MandatoryList";
 import OptionalList from "./OptionalList";
 import Validation from "./Validation";
+import Footer from "../Footer";
+
 
 function ListSection() {
   const [tumevoie, settumevoieplus] = useState(undefined);
@@ -22,6 +24,9 @@ function ListSection() {
         </button>
         {tumevoie && <Validation settumevoieplus={settumevoieplus} />}
       </div>
+
+      <Footer />
+
     </>
   );
 }
