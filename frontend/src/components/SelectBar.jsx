@@ -27,7 +27,7 @@ function SelectBar() {
             <option value="">Destination</option>
             {pays.map((el) => {
               return (
-                <option key={el.id} value={el.pays}>
+                <option key={el.id} value={el.id}>
                   {" "}
                   {el.pays}
                 </option>

@@ -17,9 +17,11 @@ function MandatoryList() {
   console.warn("coucou", data);
   return (
     <div className="mand-list">
-      <h2>Pays Choisi : {data.pays}</h2>
+      <div className="pays">
+        <h2> Destination choisie : {data.pays}</h2>
+      </div>
       <br />
-      <h3>A ne pas oublier !</h3>
+      <h3 className="oubli">A ne pas oublier !</h3>
       <ul>
         <div className="mand-list-box">
           <input type="checkbox" />
