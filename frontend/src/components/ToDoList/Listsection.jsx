@@ -13,7 +13,7 @@ function ListSection() {
   };
 
   return (
-    <>
+    <div className="list-section">
       <NavBar />
       <MandatoryList />
       <br />
@@ -24,10 +24,8 @@ function ListSection() {
         </button>
         {tumevoie && <Validation settumevoieplus={settumevoieplus} />}
       </div>
-
       <Footer />
-
-    </>
+    </div>
   );
 }
 

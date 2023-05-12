@@ -2,23 +2,23 @@ import { useState } from "react";
 
 function OptionalList() {
   const valiseList = [
-    "clés",
-    "permis de conduire",
-    "trousse de toilette",
-    "sous-vêtements/chaussettes",
-    "tongs",
-    "appareil photo",
-    "chargeur téléphone/ordi",
-    "écouteurs",
-    "protections périodiques",
-    "crème solaire",
-    "lunettes de soleil",
-    "médicaments",
-    "carte vitale/CEAM",
-    "contraceptifs",
-    "anti-moustique",
-    "guide touristique",
-    "plans/cartes",
+    "Clés",
+    "Permis de conduire",
+    "Trousse de toilette",
+    "Sous-vêtements/chaussettes",
+    "Tongs",
+    "Appareil photo",
+    "Chargeur téléphone/ordi",
+    "Ecouteurs",
+    "Protections périodiques",
+    "Crème solaire",
+    "Lunettes de soleil",
+    "Médicaments",
+    "Carte vitale/CEAM",
+    "Contraceptifs",
+    "Anti-moustique",
+    "Guide touristique",
+    "Plans/cartes",
   ];
   const [optionalList, setOptionalList] = useState([]);
   const [suggestList, setSuggestList] = useState(valiseList);
@@ -71,7 +71,12 @@ function OptionalList() {
               <li value={el} key={el}>
                 {el}
               </li>
-              <button value={el} onClick={handleDeleteObject} type="button">
+              <button
+                className="delete-button"
+                value={el}
+                onClick={handleDeleteObject}
+                type="button"
+              >
                 Retirer
               </button>
             </div>
@@ -82,14 +87,21 @@ function OptionalList() {
         <br />
         {suggestList.map((el) => {
           return (
-            <div className="opt-list-box">
-              <input type="checkbox" />
-              <li value={el} key={el}>
-                {el}
-              </li>
-              <button value={el} onClick={handleDeleteObject} type="button">
-                Retirer
-              </button>
+            <div className="sugg-list">
+              <ul className="sugg-list-box">
+                <input type="checkbox" />
+                <li value={el} key={el}>
+                  {el}
+                </li>
+                <button
+                  className="delete-button"
+                  value={el}
+                  onClick={handleDeleteObject}
+                  type="button"
+                >
+                  Retirer
+                </button>
+              </ul>
             </div>
           );
         })}
