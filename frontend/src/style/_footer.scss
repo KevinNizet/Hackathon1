@@ -1,0 +1,20 @@
+.footer {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: var(--color-primary);
+  z-index: 1;
+
+  .icons {
+    padding: 10px;
+
+    .social {
+      color: var(--color-title-text);
+      font-size: 2rem;
+    }
+  }
+}

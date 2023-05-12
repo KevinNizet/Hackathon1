@@ -17,16 +17,12 @@ const cors = require("cors");
 
 app.use(
   cors({
-    origin: process.env.FRONTEND_URL ?? "http://localhost:3000",
+    origin: process.env.FRONTEND_URL ?? "http://localhost:5173",
     optionsSuccessStatus: 200,
   })
 );
 
 // import and mount the API routes
-
-const router = require("./router");
-
-app.use(router);
 
 // serve the `backend/public` folder for public resources
 
@@ -54,7 +50,16 @@ if (fs.existsSync(reactIndexFile)) {
     res.sendFile(reactIndexFile);
   });
 }
+const voyage = require("./services/voyage.json");
 
+app.get("/api/voyage", (req, res) => {
+  res.status(200).send(voyage);
+});
+
+const pays = require("./pays");
+
+app.get("/api/pays", pays.getPays);
+app.get("/api/pays/:id", pays.getPaysById);
 // ready to export
 
 module.exports = app;

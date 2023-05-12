@@ -1,9 +1,10 @@
-import "./App.css";
+import RouterFront from "./navigation/RouterFront";
+import "./style/import.scss";
 
 function App() {
   return (
     <div className="App">
-      <p>coucou</p>
+      <RouterFront />
     </div>
   );
 }

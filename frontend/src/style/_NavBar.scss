@@ -1,0 +1,23 @@
+.NavBar {
+  background-color: var(--color-primary);
+  margin-bottom: 20px;
+
+  &_li {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    gap: 1.2em;
+    padding: 15px;
+    color: var(--color-title-text);
+    font-family: var(--titlefont-secondary);
+    font-size: 1.1em;
+  }
+  &_title {
+    color: var(--color-title-text);
+    font-family: var(--titlefont-secondary);
+    font-size: 1.2em;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+  }
+}
