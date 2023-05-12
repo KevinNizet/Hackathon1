@@ -15,8 +15,8 @@ function MandatoryList() {
 
   const mandatoryList = [
     "Billet(s) de transport",
-    "un endroit où dormir",
-    "la valise, bien sur !",
+    "Un endroit où dormir",
+    "Ma valise, bien sûr !",
   ];
   return (
     <div className="mand-list">
@@ -24,7 +24,7 @@ function MandatoryList() {
         <h2> Destination choisie : {data.pays}</h2>
       </div>
       <br />
-      <h3 className="oubli">A ne pas oublier !</h3>
+      <h3 className="oubli">À ne pas oublier !</h3>
       <ul>
         <div className="mand-list-box">
           <input type="checkbox" />
