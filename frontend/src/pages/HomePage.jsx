@@ -1,8 +1,8 @@
 import React from "react";
 import NavBar from "../components/NavBar";
-import ListSection from "../components/ToDoList/Listsection";
 import Card from "../components/Card";
 import SelectBar from "../components/SelectBar";
+import Footer from "../components/Footer";
 
 function HomePage() {
   return (
@@ -10,7 +10,7 @@ function HomePage() {
       <NavBar />
       <SelectBar />
       <Card />
-      <ListSection />
+      <Footer />
     </div>
   );
 }

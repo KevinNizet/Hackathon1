@@ -1,20 +1,18 @@
 .NavBar {
   background-color: var(--color-primary);
   margin-bottom: 20px;
-  border-radius: 7px;
 
   &_li {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
+    gap: 1.2em;
     padding: 15px;
-  }
-  &_title {
     color: var(--color-title-text);
     font-family: var(--titlefont-secondary);
-    font-size: 1.2em;
+    font-size: 1.1em;
   }
-  #NavBar_a {
+  &_title {
     color: var(--color-title-text);
     font-family: var(--titlefont-secondary);
     font-size: 1.2em;
