@@ -1,30 +1,14 @@
-import { React, useState } from "react";
+import { React } from "react";
 import { Routes, Route } from "react-router-dom";
 import HomePage from "../pages/HomePage";
 import ListSection from "../components/ToDoList/Listsection";
 
 function Router() {
-  const [selectedValue, setSelectedValue] = useState("");
   return (
     <Routes>
-      <Route
-        path="/"
-        element={
-          <HomePage
-            selectedValue={selectedValue}
-            setSelectedValue={setSelectedValue}
-          />
-        }
-      />
-      <Route
-        path="/todolist"
-        element={
-          <ListSection
-            selectedValue={selectedValue}
-            setSelectedValue={setSelectedValue}
-          />
-        }
-      />
+      <Route path="/" element={<HomePage />} />
+      <Route path="/todolist" element={<ListSection />} />
+      <Route path="/todoList/:id" element={<ListSection />} />
     </Routes>
   );
 }

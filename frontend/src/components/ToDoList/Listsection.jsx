@@ -1,25 +1,16 @@
-import PropTypes from "prop-types";
 import NavBar from "../NavBar";
 import MandatoryList from "./MandatoryList";
 import OptionalList from "./OptionalList";
 
-function ListSection({ selectedValue, setSelectedValue }) {
+function ListSection() {
   return (
     <>
       <NavBar />
-      <MandatoryList
-        selectedValue={selectedValue}
-        setSelectedValue={setSelectedValue}
-      />
+      <MandatoryList />
       <br />
       <OptionalList />
     </>
   );
 }
-
-ListSection.propTypes = {
-  selectedValue: PropTypes.string.isRequired,
-  setSelectedValue: PropTypes.func.isRequired,
-};
 
 export default ListSection;

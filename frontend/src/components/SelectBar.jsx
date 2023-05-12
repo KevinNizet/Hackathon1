@@ -1,12 +1,11 @@
 import React, { useState, useEffect } from "react";
-import PropTypes from "prop-types";
-import { useNavigate } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import "../style/_selectbar.scss";
 import "../style/_config.scss";
 
-function SelectBar({ selectedValue, setSelectedValue }) {
+function SelectBar() {
   const [pays, setPays] = useState([]);
-  const navigate = useNavigate();
+  const [selectedValue, setSelectedValue] = useState("");
 
   useEffect(() => {
     fetch("http://localhost:5025/api/pays")
@@ -18,9 +17,6 @@ function SelectBar({ selectedValue, setSelectedValue }) {
   function handleChange(e) {
     setSelectedValue(e.target.value);
     console.warn(selectedValue);
-  }
-  function handleClick() {
-    navigate("/todolist");
   }
 
   return (
@@ -43,7 +39,7 @@ function SelectBar({ selectedValue, setSelectedValue }) {
             if (selectedValue === "") {
               return el;
             }
-            return el.id === selectedValue;
+            return el.id === parseInt(selectedValue, 10);
           })
 
           .map((el) => {
@@ -53,13 +49,11 @@ function SelectBar({ selectedValue, setSelectedValue }) {
                 <img className="img" src={el.image} alt="" />
                 <p className="card_description">{el.description}</p>
                 <div className="full_button">
-                  <button
-                    className="button"
-                    type="button"
-                    onClick={handleClick}
-                  >
-                    Sélectionner
-                  </button>
+                  <NavLink to={`/todoList/${el.id}`}>
+                    <button className="button" type="button">
+                      Sélectionner
+                    </button>
+                  </NavLink>
                 </div>
               </div>
             );
@@ -68,10 +62,5 @@ function SelectBar({ selectedValue, setSelectedValue }) {
     </form>
   );
 }
-
-SelectBar.propTypes = {
-  selectedValue: PropTypes.string.isRequired,
-  setSelectedValue: PropTypes.func.isRequired,
-};
 
 export default SelectBar;

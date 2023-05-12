@@ -59,6 +59,7 @@ app.get("/api/voyage", (req, res) => {
 const pays = require("./pays");
 
 app.get("/api/pays", pays.getPays);
+app.get("/api/pays/:id", pays.getPaysById);
 // ready to export
 
 module.exports = app;

@@ -1,49 +1,44 @@
 import { useEffect, useState } from "react";
-import PropTypes from "prop-types";
+import { useParams } from "react-router-dom";
 
-function MandatoryList({ selectedValue }) {
+function MandatoryList() {
   const [data, setData] = useState([]);
-  const [pays, setPays] = useState({});
-
-  setPays();
+  const { id } = useParams();
   useEffect(() => {
-    fetch("http://localhost:5025/api/pays")
+    fetch(`http://localhost:5025/api/pays/${id}`)
       .then((res) => res.json())
       .then((db) => {
         setData(db);
-        console.warn("coucou", data);
-        console.warn("salut", pays);
-        console.warn("yo", selectedValue);
       })
       .catch((err) => console.error(err));
-  }, [selectedValue]);
+  }, []);
 
   const mandatoryList = ["Billet(s) de transport", "la valise, bien sur !"];
-
+  console.warn("coucou", data);
   return (
     <div className="mand-list">
-      <h2>Pays Choisi : {pays.pays}</h2>
+      <h2>Pays Choisi : {data.pays}</h2>
       <br />
       <h3>A ne pas oublier !</h3>
       <ul>
         <div className="mand-list-box">
           <input type="checkbox" />
           <li>
-            {pays.passeport === 1 ? "Passeport" : "Carte d'identité/Passeport"}
+            {data.passeport === 1 ? "Passeport" : "Carte d'identité/Passeport"}
           </li>
           <br />
         </div>
         <div className="mand-list-box">
           <input type="checkbox" />
-          <li>VISA : {pays.visa}</li>
+          <li>VISA : {data.visa}</li>
         </div>
         <div className="mand-list-box">
           <input type="checkbox" />
-          <li>prix du VISA : {pays.prix} euros</li>
+          <li>prix du VISA : {data.prix} euros</li>
         </div>
         <div className="mand-list-box">
           <input type="checkbox" />
-          <li>Vaccins : {pays.vaccin}</li>
+          <li>Vaccins : {data.vaccin}</li>
         </div>
       </ul>
       <ul>
@@ -60,9 +55,5 @@ function MandatoryList({ selectedValue }) {
     </div>
   );
 }
-
-MandatoryList.propTypes = {
-  selectedValue: PropTypes.string.isRequired,
-};
 
 export default MandatoryList;
