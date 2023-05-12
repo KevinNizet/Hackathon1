@@ -4,11 +4,26 @@
   margin: 0 auto;
   margin-bottom: 20px;
 
-  // .localisation_select {
-  //   display:flex;
-  //   justify-content: center;
-  //   align-items: center;
-  // }
+  #pif {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+    margin-top: 10px;
+
+    #localisation {
+      background-color: var(--color-button);
+      color: var(--color-title-text);
+      font-weight: bold;
+      font-family: var(--text-font);
+      width: 50%;
+      border-radius: 5px;
+      border: none;
+      margin: 10px 30px 30px;
+      padding: 10px;
+      text-transform: uppercase;
+      text-align: center;
+    }
+  }
 
   .card {
     display: flex;
@@ -19,8 +34,8 @@
     margin-bottom: 20px;
     max-width: 80%;
     background-color: var(--color-bg);
-    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
-    border-radius: 4px;
+    box-shadow: rgba(149, 157, 165, 0.8) 0px 8px 24px;
+    border-radius: 10px;
     transition: all 0.25s ease-out;
     overflow: hidden;
     background-color: white;
@@ -28,10 +43,10 @@
     overflow: hidden;
     color: var(--color-secondary);
 
-    // &:hover {
-    //   transform: translateY(-1px);
-    //   box-shadow: rgba(77, 79, 83, 0.2) 0px 8px 24px;
-    // }
+    &:hover {
+      transform: translateY(-1px);
+      box-shadow: rgba(77, 79, 83, 0.2) 0px 8px 24px;
+    }
 
     .img {
       height: 25vh;
@@ -52,7 +67,7 @@
       display: flex;
       justify-content: center;
     }
-     .button {
+    .button {
       background-color: var(--color-button);
       color: var(--color-title-text);
       font-weight: bold;
@@ -65,9 +80,11 @@
       text-transform: uppercase;
       background-position: center;
       transition: background 0.8s;
-    } 
+    }
     .button:hover {
-      background: var(--color-button)radial-gradient(circle, transparent 1%, var(--color-button)1%) center/15000%;
+      background: var(--color-button)
+        radial-gradient(circle, transparent 1%, var(--color-button) 1%)
+        center/15000%;
     }
     .button:active {
       background-color: #6eb9f7;
