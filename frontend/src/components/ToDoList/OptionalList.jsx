@@ -24,7 +24,7 @@ function OptionalList() {
       <h3>Votre ToDoList : </h3>
       <br />
       <p>
-        Ici, créez votre propre list de choses à emmener pendant vos vacances.
+        Ici, créez votre propre liste de choses à emmener pendant vos vacances.
         Soyez assurés de ne plus jamais oublier quoique ce soit !
       </p>
       <br />

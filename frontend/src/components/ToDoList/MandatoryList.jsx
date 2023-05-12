@@ -1,16 +1,21 @@
 import { useEffect, useState } from "react";
+import PropTypes from "prop-types";
 
-function MandatoryList() {
+function MandatoryList({ selectedValue, setSelectedValue }) {
   const [data, setData] = useState([]);
-  const [pays] = useState({});
+  const [pays, setPays] = useState({});
+  setPays(pays[selectedValue]);
+  console.warn(pays);
+  console.warn(data);
+  setSelectedValue();
 
   useEffect(() => {
     fetch("http://localhost:5025/api/pays")
       .then((res) => res.json())
       .then((db) => {
         setData(db);
-        console.warn(data);
-      });
+      })
+      .catch((err) => console.error(err));
   }, []);
 
   const mandatoryList = ["Billet(s) de transport", "la valise, bien sur !"];
@@ -55,5 +60,10 @@ function MandatoryList() {
     </div>
   );
 }
+
+MandatoryList.propTypes = {
+  selectedValue: PropTypes.number.isRequired,
+  setSelectedValue: PropTypes.func.isRequired,
+};
 
 export default MandatoryList;
