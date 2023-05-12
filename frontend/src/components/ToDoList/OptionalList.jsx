@@ -23,6 +23,11 @@ function OptionalList() {
     <div className="opt-list">
       <h3>Votre ToDoList : </h3>
       <br />
+      <p>
+        Ici, créez votre propre liste de choses à emmener pendant vos vacances.
+        Soyez assurés de ne plus jamais oublier quoique ce soit !
+      </p>
+      <br />
       <input
         className="opt-list-input"
         onChange={handleObject}
@@ -30,7 +35,7 @@ function OptionalList() {
         placeholder="A rajouter..."
         id=""
       />
-      <button type="button" onClick={handleAddObject}>
+      <button className="add-button" type="button" onClick={handleAddObject}>
         Ajouter
       </button>
       <ul>
