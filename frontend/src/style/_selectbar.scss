@@ -78,18 +78,8 @@
       margin: 20px 0px 20px 0;
       padding: 10px 40px 10px 40px;
       text-transform: uppercase;
-      background-position: center;
-      transition: background 0.8s;
+
     }
-    .button:hover {
-      background: var(--color-button)
-        radial-gradient(circle, transparent 1%, var(--color-button) 1%)
-        center/15000%;
-    }
-    .button:active {
-      background-color: #6eb9f7;
-      background-size: 100%;
-      transition: background 0s;
-    }
+  
   }
 }

@@ -18,7 +18,7 @@ function NavBar() {
             <NavLink to="/todolist">
               <div id="youhou">
                 <h2 className="NavBar_title">
-                  <RiTodoLine size={25} /> To-Do Liste
+                  <RiTodoLine size={25} /> To-Do List
                 </h2>
               </div>
             </NavLink>
