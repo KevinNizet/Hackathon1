@@ -1,7 +1,7 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
 import { AiOutlineHome } from "react-icons/ai";
-import { RiTodoLine } from "react-icons/ri";
+import { RiSuitcaseLine } from "react-icons/ri";
 
 function NavBar() {
   return (
@@ -18,7 +18,7 @@ function NavBar() {
             <NavLink to="/todolist">
               <div id="youhou">
                 <h2 className="NavBar_title">
-                  <RiTodoLine size={25} /> To-Do List
+                  <RiSuitcaseLine size={25} /> To-Do List
                 </h2>
               </div>
             </NavLink>

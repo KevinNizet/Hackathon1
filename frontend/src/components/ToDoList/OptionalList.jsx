@@ -46,7 +46,7 @@ function OptionalList() {
   };
   return (
     <div className="opt-list">
-      <h3 className="oubli">Votre To-Do List : </h3>
+      <h3 className="oubli">Ma valise : </h3>
       <br />
       <p>
         Ici, créez votre propre liste de choses à emmener pendant vos vacances.
@@ -83,7 +83,10 @@ function OptionalList() {
           );
         })}
         <br />
-        {suggestList.length >= 1 && <h3>Suggestions</h3>}
+
+        {suggestList.length >= 1 && (
+          <h3 className="suggestions">Suggestions</h3>
+        )}
         <br />
         {suggestList.map((el) => {
           return (
