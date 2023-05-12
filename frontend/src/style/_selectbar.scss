@@ -72,24 +72,14 @@
       color: var(--color-title-text);
       font-weight: bold;
       font-family: var(--text-font);
-      width: 50%;
+      width: 100%;
       border-radius: 5px;
       border: none;
-      margin: 10px 30px 30px;
-      padding: 10px;
+      margin: 20px 0px 20px 0;
+      padding: 10px 40px 10px 40px;
       text-transform: uppercase;
-      background-position: center;
-      transition: background 0.8s;
+
     }
-    .button:hover {
-      background: var(--color-button)
-        radial-gradient(circle, transparent 1%, var(--color-button) 1%)
-        center/15000%;
-    }
-    .button:active {
-      background-color: #6eb9f7;
-      background-size: 100%;
-      transition: background 0s;
-    }
+  
   }
 }
