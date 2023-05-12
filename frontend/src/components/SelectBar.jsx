@@ -15,6 +15,7 @@ function SelectBar({ selectedValue, setSelectedValue }) {
 
   function handleChange(e) {
     setSelectedValue(e.target.value);
+    console.warn(selectedValue);
   }
 
   return (
@@ -37,7 +38,7 @@ function SelectBar({ selectedValue, setSelectedValue }) {
             if (selectedValue === "") {
               return el;
             }
-            return el.pays === selectedValue;
+            return el.id === selectedValue;
           })
 
           .map((el) => {
@@ -47,7 +48,11 @@ function SelectBar({ selectedValue, setSelectedValue }) {
                 <img className="img" src={el.image} alt="" />
                 <p className="card_description">{el.description}</p>
                 <div className="full_button">
-                  <button className="button" type="button">
+                  <button
+                    className="button"
+                    type="button"
+                    onClick={handleChange}
+                  >
                     To-do List
                   </button>
                 </div>
@@ -60,7 +65,7 @@ function SelectBar({ selectedValue, setSelectedValue }) {
 }
 
 SelectBar.propTypes = {
-  selectedValue: PropTypes.number.isRequired,
+  selectedValue: PropTypes.string.isRequired,
   setSelectedValue: PropTypes.func.isRequired,
 };
 

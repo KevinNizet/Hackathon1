@@ -4,7 +4,7 @@ import HomePage from "../pages/HomePage";
 import ListSection from "../components/ToDoList/Listsection";
 
 function Router() {
-  const [selectedValue, setSelectedValue] = useState(1);
+  const [selectedValue, setSelectedValue] = useState("");
   return (
     <Routes>
       <Route

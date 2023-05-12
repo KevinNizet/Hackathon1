@@ -18,7 +18,7 @@ function ListSection({ selectedValue, setSelectedValue }) {
 }
 
 ListSection.propTypes = {
-  selectedValue: PropTypes.number.isRequired,
+  selectedValue: PropTypes.string.isRequired,
   setSelectedValue: PropTypes.func.isRequired,
 };
 

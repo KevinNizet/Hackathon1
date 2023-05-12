@@ -1,22 +1,22 @@
 import { useEffect, useState } from "react";
 import PropTypes from "prop-types";
 
-function MandatoryList({ selectedValue, setSelectedValue }) {
+function MandatoryList({ selectedValue }) {
   const [data, setData] = useState([]);
   const [pays, setPays] = useState({});
-  setPays(pays[selectedValue]);
-  console.warn(pays);
-  console.warn(data);
-  setSelectedValue();
 
+  setPays();
   useEffect(() => {
     fetch("http://localhost:5025/api/pays")
       .then((res) => res.json())
       .then((db) => {
         setData(db);
+        console.warn("coucou", data);
+        console.warn("salut", pays);
+        console.warn("yo", selectedValue);
       })
       .catch((err) => console.error(err));
-  }, []);
+  }, [selectedValue]);
 
   const mandatoryList = ["Billet(s) de transport", "la valise, bien sur !"];
 
@@ -62,8 +62,7 @@ function MandatoryList({ selectedValue, setSelectedValue }) {
 }
 
 MandatoryList.propTypes = {
-  selectedValue: PropTypes.number.isRequired,
-  setSelectedValue: PropTypes.func.isRequired,
+  selectedValue: PropTypes.string.isRequired,
 };
 
 export default MandatoryList;

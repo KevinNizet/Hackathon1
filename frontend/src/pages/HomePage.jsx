@@ -20,7 +20,7 @@ function HomePage({ selectedValue, setSelectedValue }) {
 }
 
 HomePage.propTypes = {
-  selectedValue: PropTypes.number.isRequired,
+  selectedValue: PropTypes.string.isRequired,
   setSelectedValue: PropTypes.func.isRequired,
 };
 
