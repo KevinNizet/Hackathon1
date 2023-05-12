@@ -1,12 +1,24 @@
-.mand-list, .opt-list {
-    width: 80%;
-    margin: 0 auto;
-    .mand-list-box, .opt-list-box {
-        display: flex;
-        gap: 10px;
-        line-height: 2;
-    }
-    .add-button {
-        margin-left: 5px;
-    }
+.mand-list,
+.opt-list {
+  width: 80%;
+  margin: 0 auto;
+  .mand-list-box,
+  .opt-list-box {
+    display: flex;
+    gap: 10px;
+    line-height: 2;
+  }
+  .add-button {
+    margin-left: 5px;
+  }
+  .oubli {
+    background-color: var(--color-secondary);
+    color: var(--color-title-text);
+    padding: 13px;
+    border-radius: 7px;
+    margin-bottom: 10px;
+  }
+  .pays {
+    margin-top: 45px;
+  }
 }

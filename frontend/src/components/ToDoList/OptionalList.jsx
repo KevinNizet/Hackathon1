@@ -46,7 +46,7 @@ function OptionalList() {
   };
   return (
     <div className="opt-list">
-      <h3>Votre ToDoList : </h3>
+      <h3 className="oubli">Votre ToDoList : </h3>
       <br />
       <p>
         Ici, créez votre propre liste de choses à emmener pendant vos vacances.
