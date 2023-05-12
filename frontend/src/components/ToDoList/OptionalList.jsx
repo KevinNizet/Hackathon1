@@ -71,7 +71,12 @@ function OptionalList() {
               <li value={el} key={el}>
                 {el}
               </li>
-              <button value={el} onClick={handleDeleteObject} type="button">
+              <button
+                className="delete-button"
+                value={el}
+                onClick={handleDeleteObject}
+                type="button"
+              >
                 Retirer
               </button>
             </div>
@@ -82,14 +87,21 @@ function OptionalList() {
         <br />
         {suggestList.map((el) => {
           return (
-            <div className="opt-list-box">
-              <input type="checkbox" />
-              <li value={el} key={el}>
-                {el}
-              </li>
-              <button value={el} onClick={handleDeleteObject} type="button">
-                Retirer
-              </button>
+            <div className="sugg-list">
+              <ul className="sugg-list-box">
+                <input type="checkbox" />
+                <li value={el} key={el}>
+                  {el}
+                </li>
+                <button
+                  className="delete-button"
+                  value={el}
+                  onClick={handleDeleteObject}
+                  type="button"
+                >
+                  Retirer
+                </button>
+              </ul>
             </div>
           );
         })}

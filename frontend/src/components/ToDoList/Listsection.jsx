@@ -5,13 +5,13 @@ import Footer from "../Footer";
 
 function ListSection() {
   return (
-    <>
+    <div className="list-section">
       <NavBar />
       <MandatoryList />
       <br />
       <OptionalList />
       <Footer />
-    </>
+    </div>
   );
 }
 

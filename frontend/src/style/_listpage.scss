@@ -1,12 +1,17 @@
+.list-section {
+  height: 180vh;
+}
+
 .mand-list,
 .opt-list {
   width: 80%;
   margin: 0 auto;
   .mand-list-box,
-  .opt-list-box {
+  .opt-list-box, .sugg-list-box {
     display: flex;
+    justify-content: space-between;
     gap: 10px;
-    line-height: 2;
+    line-height: 3;
   }
   .add-button {
     margin-left: 5px;
@@ -20,5 +25,9 @@
   }
   .pays {
     margin-top: 45px;
+  }
+  .delete-button {
+    margin: 10px;
+    padding: 0px 10px;
   }
 }
