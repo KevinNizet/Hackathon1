@@ -26,7 +26,7 @@ function SelectBar() {
     <form className="center">
       <label htmlFor="localisation_select">
         <select id="localisation" onChange={handleChange}>
-          <option value="">Selectionne ta destination</option>
+          <option value="">Selectionne ta destination </option>
           {pays.map((el) => {
             return (
               <option key={el.id} value={el.id}>
