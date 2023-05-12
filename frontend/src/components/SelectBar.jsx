@@ -1,12 +1,11 @@
 import React, { useState, useEffect } from "react";
-import { useNavigate } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import "../style/_selectbar.scss";
 import "../style/_config.scss";
 
 function SelectBar() {
   const [pays, setPays] = useState([]);
   const [selectedValue, setSelectedValue] = useState("");
-  const navigate = useNavigate();
 
   useEffect(() => {
     fetch("http://localhost:5025/api/pays")
@@ -17,9 +16,7 @@ function SelectBar() {
 
   function handleChange(e) {
     setSelectedValue(e.target.value);
-  }
-  function handleClick() {
-    navigate("/todolist");
+    console.warn(selectedValue);
   }
 
   return (
@@ -42,7 +39,7 @@ function SelectBar() {
             if (selectedValue === "") {
               return el;
             }
-            return el.pays === selectedValue;
+            return el.id === parseInt(selectedValue, 10);
           })
 
           .map((el) => {
@@ -52,13 +49,11 @@ function SelectBar() {
                 <img className="img" src={el.image} alt="" />
                 <p className="card_description">{el.description}</p>
                 <div className="full_button">
-                  <button
-                    className="button"
-                    type="button"
-                    onClick={handleClick}
-                  >
-                    Sélectionner
-                  </button>
+                  <NavLink to={`/todoList/${el.id}`}>
+                    <button className="button" type="button">
+                      Sélectionner
+                    </button>
+                  </NavLink>
                 </div>
               </div>
             );

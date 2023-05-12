@@ -1,4 +1,4 @@
-import React from "react";
+import { React } from "react";
 import { Routes, Route } from "react-router-dom";
 import HomePage from "../pages/HomePage";
 import ListSection from "../components/ToDoList/Listsection";
@@ -8,6 +8,7 @@ function Router() {
     <Routes>
       <Route path="/" element={<HomePage />} />
       <Route path="/todolist" element={<ListSection />} />
+      <Route path="/todoList/:id" element={<ListSection />} />
     </Routes>
   );
 }
