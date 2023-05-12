@@ -18,7 +18,7 @@ function OptionalList() {
     "Contraceptifs",
     "Anti-moustique",
     "Guide touristique",
-    "Plans/cartes",
+    "GPS",
   ];
   const [optionalList, setOptionalList] = useState([]);
   const [suggestList, setSuggestList] = useState(valiseList);
@@ -49,15 +49,15 @@ function OptionalList() {
       <h3 className="oubli">Ma valise : </h3>
       <br />
       <p>
-        Ici, créez votre propre liste de choses à emmener pendant vos vacances.
-        Soyez assurés de ne plus jamais oublier quoique ce soit !
+        Ici, crée ta propre liste d'affaires à emmener pendant tes vacances.
+        Sois assuré de ne plus jamais oublier quoique ce soit !
       </p>
       <br />
       <input
         className="opt-list-input"
         onChange={handleObject}
         type="text"
-        placeholder="A rajouter..."
+        placeholder="À rajouter..."
         id=""
       />
       <button className="add-button" type="button" onClick={handleAddObject}>
