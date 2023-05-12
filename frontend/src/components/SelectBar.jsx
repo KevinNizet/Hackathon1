@@ -1,10 +1,12 @@
 import React, { useState, useEffect } from "react";
 import PropTypes from "prop-types";
+import { useNavigate } from "react-router-dom";
 import "../style/_selectbar.scss";
 import "../style/_config.scss";
 
 function SelectBar({ selectedValue, setSelectedValue }) {
   const [pays, setPays] = useState([]);
+  const navigate = useNavigate();
 
   useEffect(() => {
     fetch("http://localhost:5025/api/pays")
@@ -16,6 +18,9 @@ function SelectBar({ selectedValue, setSelectedValue }) {
   function handleChange(e) {
     setSelectedValue(e.target.value);
     console.warn(selectedValue);
+  }
+  function handleClick() {
+    navigate("/todolist");
   }
 
   return (
@@ -51,9 +56,9 @@ function SelectBar({ selectedValue, setSelectedValue }) {
                   <button
                     className="button"
                     type="button"
-                    onClick={handleChange}
+                    onClick={handleClick}
                   >
-                    To-do List
+                    Sélectionner
                   </button>
                 </div>
               </div>
