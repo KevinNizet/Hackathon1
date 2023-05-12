@@ -22,17 +22,19 @@ function SelectBar() {
   return (
     <form className="center">
       <label htmlFor="localisation_select">
-        <select id="localisation" onChange={handleChange}>
-          <option value="">Selectionne ta destination </option>
-          {pays.map((el) => {
-            return (
-              <option key={el.id} value={el.id}>
-                {" "}
-                {el.pays}
-              </option>
-            );
-          })}
-        </select>
+        <div id="pif">
+          <select id="localisation" onChange={handleChange}>
+            <option value="">Destination</option>
+            {pays.map((el) => {
+              return (
+                <option key={el.id} value={el.pays}>
+                  {" "}
+                  {el.pays}
+                </option>
+              );
+            })}
+          </select>
+        </div>
 
         {pays
           .filter((el) => {
