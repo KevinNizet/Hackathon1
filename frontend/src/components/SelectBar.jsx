@@ -7,7 +7,7 @@ function SelectBar() {
   const [selectedValue, setSelectedValue] = useState("");
 
   useEffect(() => {
-    fetch("http://localhost:5025/api/voyage")
+    fetch("http://localhost:5025/api/pays")
       .then((res) => res.json())
       .then((res) => setPays(res))
       .catch((err) => console.error(err));
@@ -31,7 +31,6 @@ function SelectBar() {
             );
           })}
         </select>
-        
 
         {pays
           .filter((el) => {
@@ -47,16 +46,16 @@ function SelectBar() {
                 <h2 className="name">{el.pays}</h2>
                 <img className="img" src={el.image} alt="" />
                 <p className="card_description">{el.description}</p>
-               <div className="full_button">              
-                <button className="button" >To-do List</button>
-                </div> 
+                <div className="full_button">
+                  <button className="button" type="button">
+                    To-do List
+                  </button>
+                </div>
               </div>
-              
             );
           })}
-          </label>
+      </label>
     </form>
-      
   );
 }
 
