@@ -5,7 +5,6 @@ import OptionalList from "./OptionalList";
 import Validation from "./Validation";
 import Footer from "../Footer";
 
-
 function ListSection() {
   const [tumevoie, settumevoieplus] = useState(undefined);
   const handleClick = () => {
