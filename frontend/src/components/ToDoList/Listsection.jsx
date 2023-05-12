@@ -1,6 +1,7 @@
 import NavBar from "../NavBar";
 import MandatoryList from "./MandatoryList";
 import OptionalList from "./OptionalList";
+import Footer from "../Footer";
 
 function ListSection() {
   return (
@@ -9,6 +10,7 @@ function ListSection() {
       <MandatoryList />
       <br />
       <OptionalList />
+      <Footer />
     </>
   );
 }
