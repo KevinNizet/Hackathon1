@@ -9,7 +9,8 @@ function Validation({ settumevoieplus }) {
       onClick={() => settumevoieplus(false)}
     >
       <div className="fondgris">
-        <h1>Bonne Vacances !</h1>
+        <h1>Bonnes Vacances !</h1>
+        <p className="popup-text">😎 💼</p>
       </div>
     </button>
   );
