@@ -1,6 +1,8 @@
 ## Concept
 
-Dans le cadre du Hackaton N°1, thème "Holidays", nous avons développé l'application Dans-ma-valise pour ne plus jamais rien oublier lors de la préparation de ses vacances
+Dans le cadre du Hackaton N°1, thème "Vacances", nous avons développé l'application DansMaValise pour ne plus jamais rien oublier lors de la préparation de ses vacances ! 
+L'application propose une liste  des choses indispensables à ne pas oublier en amont du départ en fonction du pays de destination choisi. 
+Elle permet également de personnaliser sa ToDo List afin d'emporter dans sa valise le nécessaire à des vacances réussies.
 
 ## Setup & Use
 
